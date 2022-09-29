@@ -11,7 +11,7 @@ function writePassword() {
     return;
 
   //if value does not meet parameters, repeatedly asks for new value 
-  while (((numChar < 8) || (numChar > 128)) && numChar != undefined) {
+  while (numChar < 8 || numChar > 128) {
     alert("Password must be between 8 and 128 characters");
     numChar = prompt("How many characters would you like your password to contain?");
     if (numChar == undefined)
